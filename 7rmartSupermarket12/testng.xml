@@ -5,14 +5,7 @@
 <parameter name="browser" value="Chrome"></parameter>
 <listeners><listener class-name="listeners.Listners"></listener></listeners>
  <test thread-count="5" name="Test">
- <classes><class name="testscripts.SubCategoryTest">
- 
- 
- 
-
-
-
-
-</class></classes>
+ <classes><class name="testscripts.HomeTest">
+ </class></classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

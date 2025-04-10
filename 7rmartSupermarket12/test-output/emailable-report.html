@@ -9,28 +9,16 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Suite</th></tr>
-<tr><td><a href="#t0">Test</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">2</td><td class="num">25,463</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Test</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">2</td><td class="num">13,976</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="2">testscripts.SubCategoryTest</td><td><a href="#m0">addNewCategory</a></td><td rowspan="1">1744194684242</td><td rowspan="1">2706</td></tr><tr class="failedeven"><td><a href="#m1">searchCategory</a></td><td rowspan="1">1744194690376</td><td rowspan="1">11661</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="2">testscripts.ManageNewsTest</td><td><a href="#m0">addManageNewsNewCategory</a></td><td rowspan="1">1744258624540</td><td rowspan="1">2132</td></tr><tr class="failedeven"><td><a href="#m1">searchManageNewsCategory</a></td><td rowspan="1">1744258630008</td><td rowspan="1">594</td></tr></tbody>
 </table>
-<h2>Test</h2><h3 id="m0">testscripts.SubCategoryTest#addNewCategory</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
-	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:96)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at jdk.proxy2/jdk.proxy2.$Proxy15.sendKeys(Unknown Source)
-	at pages.SubCategoryPage.clickonSubCategorySubCategory(SubCategoryPage.java:70)
-	at testscripts.SubCategoryTest.addNewCategory(SubCategoryTest.java:39)
+<h2>Test</h2><h3 id="m0">testscripts.ManageNewsTest#addManageNewsNewCategory</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException: Cannot invoke &quot;pages.ManageNewsPage.clickonManageNews()&quot; because &quot;this.manageNewsPage&quot; is null
+	at testscripts.ManageNewsTest.addManageNewsNewCategory(ManageNewsTest.java:32)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">testscripts.SubCategoryTest#searchCategory</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: Cannot locate option with value: veggies
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: &apos;4.28.1&apos;, revision: &apos;73f5ad48a2&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.5&apos;
-Driver info: driver.version: unknown
-	at org.openqa.selenium.support.ui.Select.findOptionsByValue(Select.java:393)
-	at org.openqa.selenium.support.ui.Select.selectByValue(Select.java:277)
-	at utilities.PageUtility.selectDropdownWithValue(PageUtility.java:18)
-	at pages.SubCategoryPage.clickSearchListSubCategoriesCategory(SubCategoryPage.java:117)
-	at testscripts.SubCategoryTest.searchCategory(SubCategoryTest.java:64)
+... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">testscripts.ManageNewsTest#searchManageNewsCategory</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException: Cannot invoke &quot;pages.ManageNewsPage.clickonManageNews()&quot; because &quot;this.manageNewsPage&quot; is null
+	at testscripts.ManageNewsTest.searchManageNewsCategory(ManageNewsTest.java:53)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 ... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>

@@ -20,7 +20,7 @@ public class SubCategoryTest  extends Base{
 	public HomePage home;
 	public LoginPage loginpage;
 	
-	@Test
+	@Test(description = "Add new Category and SubCategory in Sub-Category Menu", priority = 1, groups = { "smoke" })
 	public void addNewCategory() throws IOException
 	{
 		String username = ExcelUtility.getStringdata(0, 0, "SignPage");
@@ -36,15 +36,16 @@ public class SubCategoryTest  extends Base{
 		
 		home3.clickonSubCategoryCategory();
 		String input=ExcelUtility.getStringdata(0, 0, "SubCategory");
-		home3.clickonSubCategorySubCategory(input);
+		home3.clickonSubCategorySubCategory();
+		
 		boolean isSubCategoryisEnabled=home3.isSubCategoryisEnabled();
-		Assert.assertTrue(isSubCategoryisEnabled,Messages.VALIDCREDENTIALERROR);
+		Assert.assertTrue(isSubCategoryisEnabled,Messages.SUBCATADDED);
 		home3.chooseImage();
 		home3.pageScroll();
 		home3.clickonSaveButton();
 		
 	}
-	@Test
+	@Test(description = "Search the added item in Sub-Category Menu", priority = 2, groups = { "smoke" })
 	
 public void searchCategory() throws IOException
 	{
@@ -56,40 +57,17 @@ public void searchCategory() throws IOException
 		
 		SubCategoryPage home3=new SubCategoryPage(driver);
 		 home3.clicksubcategory();
-		 //home3.clickonSubCategoryCategory();
-		 //home3.clickonSubCategorySubCategory();
+		 
 		 home3.clickonSearchButton();
-		 String input=ExcelUtility.getStringdata(1, 0, "SubCategory");
-		 String input1=ExcelUtility.getStringdata(1, 1, "SubCategory");
-		 home3.clickSearchListSubCategoriesCategory(input);
-		 home3.clickSearchListSubCategoriesSubCategory(input1);
+		// String input=ExcelUtility.getStringdata(1, 0, "SubCategory");
+		 //String input1=ExcelUtility.getStringdata(1, 1, "SubCategory");
+		 home3.clickSearchListSubCategoriesCategory();
+		 home3.clickSearchListSubCategoriesSubCategory();
 		 boolean isSubCategoryisEnabled=home3.isSubCategoryisEnabled();
-			Assert.assertTrue(isSubCategoryisEnabled,Messages.VALIDCREDENTIALERROR);
+			Assert.assertTrue(isSubCategoryisEnabled,Messages.SUBCATEGORYS);
 		 
 		
-	    //home3.clickcategory();
-	    //home3.clickonsearchListSubCategoryCategory();
-	    
-	    //home3.clickonSearchButton();
-	    //home3.clickSearchListSubCategoriesCategory();
-	    //home3.clickSearchListSubCategoriesSubCategory();
-	    //home3. clickonSearchButton();
-	    //home3.clickSearchListSubCategoriesSubCategory();
-	    //home3. clickonSearch1();
-	    //home3.clickSearchListSubCategoriesSubCategory();
-	    //home3.clickonSearch1();
-	    
-	    //WebElement Category=driver.findElement(By.xpath("//select[@id='un']"));
-	   // Category.click();
-	    //Select select=new Select(Category);
-	     //select.selectByIndex(1);
-	//select.selectByVisibleText("Python");
-	//select.selectByValue("veggies");
-	     //home3.clickonSubCategory();
-	//WebElement subCategory=driver.findElement(By.xpath("//input[@placeholder='Sub Category']"));
-	//subCategory.sendKeys("carrot");
-	//WebElement searchElement=driver.findElement(By.xpath("//button[@name='Search']"));
-	//searchElement.click();
+	
 
 }
 }

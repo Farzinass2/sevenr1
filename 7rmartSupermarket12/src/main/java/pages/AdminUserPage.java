@@ -17,7 +17,7 @@ public class AdminUserPage {
 		PageFactory.initElements(driver, this);
 	}
 	@FindBy(xpath="//i[@class='nav-icon fas fa-users']")private WebElement adminuserElement;
-	@FindBy(xpath="//a[@class='btn btn-rounded btn-danger']")private WebElement newElement;
+	@FindBy(xpath="/html/body/div/div[1]/section/div[1]/a[1]")private WebElement newElement;
 	
 	@FindBy(xpath="//a[@class='btn btn-rounded btn-primary']")private WebElement searchElement;
 	@FindBy(xpath="//a[@class='btn btn-rounded btn-warning']")private WebElement resetElement;
@@ -30,9 +30,10 @@ public class AdminUserPage {
 	@FindBy(xpath="//button[@name='Search']")private  WebElement searchElement1;
     @FindBy(xpath="//p[text()='Manage Users']")private WebElement manageUserElement;
     
-	@FindBy(xpath="//input[@type='text'])[2]")private	WebElement adminUserInformationusernamElement;
+    
+	@FindBy(xpath="//input[@name='username']")private	WebElement username;
 	//adminUserInformationusernamElement.sendKeys("arya");
-	@FindBy(xpath="//input[@class='form-control'])[3]")private WebElement adminUserInformationpasswordElement;
+	@FindBy(xpath="//input[@id='password']")private WebElement password;
 	//adminUserInformationpasswordElement.sendKeys("arjun");
 	@FindBy(xpath="//select[@name='user_type']")private WebElement adminUserInformationUserTypElement; 
 	//adminUserInformationUserTypElement.click();
@@ -57,10 +58,10 @@ public class AdminUserPage {
 		adminuserElement.click();
 	    return this;
 	}
-	public void clickonNewButton()
+	public AdminUserPage clickonNewButton()
 	{
 		newElement.click();
-		return ;
+		return this ;
 	}
 	public void clickonSearchButton()
 	{
@@ -72,14 +73,16 @@ public class AdminUserPage {
 		resetElement.click();
 		return ;
 	}
-	public AdminUserPage clickonAdminUserSearchButton()
+
+	public AdminUserPage enterUsernameonUserNameField(String username1)
 	{
-		adminusersaerchElement.click();
+		
+	username.sendKeys(username1);
 		return this;
 	}
-	public AdminUserPage clickonAdminUserSearch(String input)
+	public AdminUserPage enterPasswordonPasswordField(String password1)
 	{
-		searchadminusernamElement1.sendKeys(input);	
+		password.sendKeys("arjun");	
 		return this;
 	}
 	public AdminUserPage clickonAdminUseTypeElement()
@@ -100,15 +103,7 @@ public class AdminUserPage {
 		return;
 		
 	}
-	public void clickonadminUserInformationusernamElement(String username) {
-		adminUserInformationusernamElement.sendKeys("carrot");
-		
-	}
-	public void clickonadminUserInformationpasswordElement(String password)
-	{
-		adminUserInformationpasswordElement.sendKeys("fruit");
-		
-	}
+
 	public void clickonadminUserInformationUserTypElement(String input1)
 	{
 		adminUserInformationUserTypElement.sendKeys(input1);
@@ -127,16 +122,90 @@ public class AdminUserPage {
 	
 			
 	}
-	public void enterPasswordonPasswordField(String password1) {
-		adminUserInformationpasswordElement.sendKeys(password1);
-		
-	}
-	public void enterUsernameonUserNameField(String username1) {
-		// TODO Auto-generated method stub
-		adminUserInformationusernamElement.sendKeys(username1);
-		
-	}
 	
 	
 
 }
+//package pages;
+
+//import org.openqa.selenium.WebDriver;
+//import org.openqa.selenium.WebElement;
+//import org.openqa.selenium.support.FindBy;
+//import org.openqa.selenium.support.PageFactory;
+//import org.openqa.selenium.support.ui.Select;
+
+//import utilities.WaitUtility;
+
+//public class AdminUsersPage {
+	
+	//WaitUtility wait=new WaitUtility();
+	//public WebDriver driver1;
+	//public AdminUsersPage(WebDriver driver)
+	//{
+		//this.driver1=driver;
+		//PageFactory.initElements(driver,this);
+	//}
+	//@FindBy(xpath="//i[@class=\"nav-icon fas fa-users\"]")private WebElement adminUserSelect;
+	//@FindBy(xpath="//p[text()='Manage Users']")private WebElement manageUser;
+	//@FindBy(xpath="//a[@class='btn btn-rounded btn-danger']")private WebElement newAdminUser;
+	//@FindBy(xpath="//input[@name='username']")private WebElement newUserName;
+	//@FindBy(xpath="//input[@id='password']")private WebElement newPassWord;
+	//@FindBy(xpath="//select[@name='user_type']")private WebElement newUserType;
+	//@FindBy(xpath="//button[@name=\"Create\"]")private WebElement saveButton;
+	//@FindBy(xpath="//a[@class='btn btn-rounded btn-primary']")private WebElement search;
+	//@FindBy(xpath="//input[@id='un']")private WebElement searchUserName;
+	//@FindBy(xpath="//button[@class=\"btn btn-block-sm btn-danger\"]")private WebElement searchButtonUserName;
+	//@FindBy(xpath="//button[@aria-hidden=\"true\"]")private WebElement alertAdminUser;
+	//@FindBy(xpath ="//span[@class='badge bg-success']")private WebElement activebutton;
+	
+	
+	//public AdminUsersPage clickonNewAdminUser() {
+
+		//newAdminUser.click();
+		//return this;
+	//}
+	//public AdminUsersPage enterNewUserName(String newuserName) {
+		//newUserName.clear();
+		//newUserName.click();
+		//newUserName.sendKeys(newuserName);
+		//return this;
+	//}
+	//public AdminUsersPage enterNewPassword(String newpassword) {
+		//newPassWord.sendKeys(newpassword);
+		//return this;
+	//}
+	//public AdminUsersPage selectNewUserType() {
+		//Select select=new Select(newUserType);
+		//select.selectByIndex(1);
+		//return this;
+
+	//}
+	//public AdminUsersPage clickonAdminUser() {
+
+		//adminUserSelect.click();
+		//return this;
+	//}
+	//public AdminUsersPage clickonSaveButton() {
+		//wait.waitUntilElementtobeSelected(driver1, adminUserSelect);
+		//saveButton.click();
+		//return this;
+	//}
+	//public AdminUsersPage clickonSearch() {
+		//search.click();
+		//return this;
+	//}
+	//public AdminUsersPage enterSearchUserName(String newuserName) {
+		//searchUserName.sendKeys(newuserName);
+		//return this;
+	//}
+	//public AdminUsersPage clickonSearchButtonUserType() {
+		//searchButtonUserName.click();
+		//return this;
+	//}
+	//public boolean isAlertWindowPresent() {
+		//return alertAdminUser.isDisplayed();
+	//}
+	//public String verifyActiveSearchisWorking() {
+		//return activebutton.getText();
+	//}
+//}

@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/2/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Apr 09 16:01:16 IST 2025</td>
+<td>Started on:</td><td>Thu Apr 10 09:46:57 IST 2025</td>
 </tr>
-<tr><td>Total time:</td><td>25 seconds (25463 ms)</td>
+<tr><td>Total time:</td><td>13 seconds (13976 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,23 +76,50 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='testscripts.SubCategoryTest.addNewCategory()'><b>addNewCategory</b><br>Test class: testscripts.SubCategoryTest</td>
-<td><div><pre>java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
-	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:96)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at jdk.proxy2/jdk.proxy2.$Proxy15.sendKeys(Unknown Source)
-	at pages.SubCategoryPage.clickonSubCategorySubCategory(SubCategoryPage.java:70)
-	at testscripts.SubCategoryTest.addNewCategory(SubCategoryTest.java:39)
+<td title='testscripts.ManageNewsTest.searchManageNewsCategory()'><b>searchManageNewsCategory</b><br>Test class: testscripts.ManageNewsTest<br>Test method: Verify user can search the entered news on Manage_News</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;pages.ManageNewsPage.clickonManageNews()&quot; because &quot;this.manageNewsPage&quot; is null
+	at testscripts.ManageNewsTest.searchManageNewsCategory(ManageNewsTest.java:53)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1605128733", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1605128733'><pre>java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
-	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:96)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace9054826", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace9054826'><pre>java.lang.NullPointerException: Cannot invoke &quot;pages.ManageNewsPage.clickonManageNews()&quot; because &quot;this.manageNewsPage&quot; is null
+	at testscripts.ManageNewsTest.searchManageNewsCategory(ManageNewsTest.java:53)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at jdk.proxy2/jdk.proxy2.$Proxy15.sendKeys(Unknown Source)
-	at pages.SubCategoryPage.clickonSubCategorySubCategory(SubCategoryPage.java:70)
-	at testscripts.SubCategoryTest.addNewCategory(SubCategoryTest.java:39)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>testscripts.ManageNewsTest@2d0399f4</td></tr>
+<tr>
+<td title='testscripts.ManageNewsTest.addManageNewsNewCategory()'><b>addManageNewsNewCategory</b><br>Test class: testscripts.ManageNewsTest<br>Test method: Verify user can enter new news on Manage_News</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;pages.ManageNewsPage.clickonManageNews()&quot; because &quot;this.manageNewsPage&quot; is null
+	at testscripts.ManageNewsTest.addManageNewsNewCategory(ManageNewsTest.java:32)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1906029492", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1906029492'><pre>java.lang.NullPointerException: Cannot invoke &quot;pages.ManageNewsPage.clickonManageNews()&quot; because &quot;this.manageNewsPage&quot; is null
+	at testscripts.ManageNewsTest.addManageNewsNewCategory(ManageNewsTest.java:32)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -121,60 +148,7 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
 <td>2</td>
-<td>testscripts.SubCategoryTest@f68f0dc</td></tr>
-<tr>
-<td title='testscripts.SubCategoryTest.searchCategory()'><b>searchCategory</b><br>Test class: testscripts.SubCategoryTest</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: Cannot locate option with value: veggies
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: &apos;4.28.1&apos;, revision: &apos;73f5ad48a2&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.5&apos;
-Driver info: driver.version: unknown
-	at org.openqa.selenium.support.ui.Select.findOptionsByValue(Select.java:393)
-	at org.openqa.selenium.support.ui.Select.selectByValue(Select.java:277)
-	at utilities.PageUtility.selectDropdownWithValue(PageUtility.java:18)
-	at pages.SubCategoryPage.clickSearchListSubCategoriesCategory(SubCategoryPage.java:117)
-	at testscripts.SubCategoryTest.searchCategory(SubCategoryTest.java:64)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2094310615", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2094310615'><pre>org.openqa.selenium.NoSuchElementException: Cannot locate option with value: veggies
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: &apos;4.28.1&apos;, revision: &apos;73f5ad48a2&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.5&apos;
-Driver info: driver.version: unknown
-	at org.openqa.selenium.support.ui.Select.findOptionsByValue(Select.java:393)
-	at org.openqa.selenium.support.ui.Select.selectByValue(Select.java:277)
-	at utilities.PageUtility.selectDropdownWithValue(PageUtility.java:18)
-	at pages.SubCategoryPage.clickSearchListSubCategoriesCategory(SubCategoryPage.java:117)
-	at testscripts.SubCategoryTest.searchCategory(SubCategoryTest.java:64)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at org.testng.TestRunner.privateRun(TestRunner.java:739)
-	at org.testng.TestRunner.run(TestRunner.java:614)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div></td>
-<td>11</td>
-<td>testscripts.SubCategoryTest@f68f0dc</td></tr>
+<td>testscripts.ManageNewsTest@2d0399f4</td></tr>
 </table><p>
 </body>
 </html>

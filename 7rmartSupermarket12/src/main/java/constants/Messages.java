@@ -7,5 +7,7 @@ public class Messages {
 	 public static final String VALIDCREDENTIALERROR3="user able to login successfully";
 	 public static final String ALERTWINDOWMESSAGE="Alert window present after click save Button";
 	 public static final String NEWADMINPRESENT="Search the window with active Button is present";
-	 public static final String SUBCATEGORYSEARCH2="Verify the searched element is present after search";
+	 public static final String SUBCATEGORYS="Verify the searched element is present after search";
+	 public static final String SUBCATADDED="Verifying Alert window present after SAVE";
+	 
 }
