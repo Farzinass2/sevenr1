@@ -19,9 +19,10 @@ import utilities.RandomDataUtility;
 
 
 public class AdminUserTest extends Base{
-	AdminUserPage adminusers;
+	
 	HomePage homepage;
-	private AdminUserPage admin;
+	private LoginPage loginpage;
+	
 
 	
 	@Test(description="Whether user can create new Admin user",priority=1,groups= {"smoke"})
@@ -34,24 +35,64 @@ public class AdminUserTest extends Base{
 		loginpage.enterUsernameonUserNameField(username).enterPasswordonPasswordField(password);
 		homepage=loginpage.clickonSignInButton();
 		
-		AdminUserPage admin=new AdminUserPage(driver);
+	    AdminUserPage admin=new AdminUserPage(driver);
 		admin.clickonAdminUser();
-		admin.clickonManageUserElement();
-		admin.clickonNewButton();
+		admin.clickonManageUsers1();
+		homepage.clickonNewButton();
 		
 		//admin.clickonadminUserInformationusernamElement();
 		//admin.clickonadminUserInformationpasswordElement();
-		String input1=ExcelUtility.getStringdata(0, 0, "NewAdmin");
-		admin.clickonadminUserInformationUserTypElement(input1);
-		admin.clickonSaveButton();
+		
 		RandomDataUtility random=new RandomDataUtility();
 		String username1=random.createRandomUsername();
 		String password1=random.createRandomPassword();
 	admin.enterUsernameonUserNameField(username1);
 		admin.enterPasswordonPasswordField(password1);
-		boolean clickonAdmin1=admin.clickonAdmin1();
-		Assert.assertTrue(clickonAdmin1,Messages.ALERTWINDOWMESSAGE);
+		admin.clickonAdminUseTypeElement();
+		admin.clickonSaveButton1();
+		boolean isAlertWindowPresent=admin.isAlertWindowPresenting() ;
+		Assert.assertTrue(isAlertWindowPresent,Messages.ALERTWINDOWMESSAGE);
 	}
+		//adminusers.clickonAdminUserNavigationLink();
+		//homepage.clickonAdminUser();
+		//adminusers.clickonManageUsers1();
+		//adminusers=homepage.clickonManageNews();
+		
+@Test(description="Whether user can search new Admin",priority=2,groups= {"smoke"})
+	public void searchCreatedAdminUser1() throws IOException
+	{
+		String username=ExcelUtility.getStringdata(0,0,"SignPage");
+		String password=ExcelUtility.getStringdata(0,1,"SignPage");
+		LoginPage loginpage=new LoginPage(driver);
+		loginpage.enterUsernameonUserNameField(username).enterPasswordonPasswordField(password);
+		homepage=loginpage.clickonSignInButton();
+		
+		AdminUserPage admin=new AdminUserPage(driver);
+		admin.clickonAdminUser();
+		admin.clickonManageUsers1();
+		homepage.clickonSearchButton();
+		String newusername=ExcelUtility.getStringdata(0, 0, "NewAdmin");
+		
+		admin.enterSearchuserName(newusername);
+		//admin.clickonSearchButtonUserType();
+		admin.clickonSearchButton();
+		
+	
 }
-		
-		
+@Test(description="Whether user can able to perform reset",priority=3,groups= {"smoke"})
+public void verfysuserisabletoreset() throws IOException
+{
+	String username=ExcelUtility.getStringdata(0,0,"SignPage");
+	String password=ExcelUtility.getStringdata(0,1,"SignPage");
+	LoginPage loginpage=new LoginPage(driver);
+	loginpage.enterUsernameonUserNameField(username).enterPasswordonPasswordField(password);
+	homepage=loginpage.clickonSignInButton();
+	
+	AdminUserPage admin=new AdminUserPage(driver);
+	admin.clickonAdminUser();
+	admin.clickonManageUsers1();
+homepage.clickonResetButton();
+
+
+}
+}

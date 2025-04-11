@@ -19,6 +19,9 @@ import utilities.ExcelUtility;
 public class SubCategoryTest  extends Base{
 	public HomePage home;
 	public LoginPage loginpage;
+	private String input1;
+	private String input2;
+	private String input;
 	
 	@Test(description = "Add new Category and SubCategory in Sub-Category Menu", priority = 1, groups = { "smoke" })
 	public void addNewCategory() throws IOException
@@ -35,8 +38,10 @@ public class SubCategoryTest  extends Base{
 		home3.clickonNewButton();
 		
 		home3.clickonSubCategoryCategory();
-		String input=ExcelUtility.getStringdata(0, 0, "SubCategory");
-		home3.clickonSubCategorySubCategory();
+		String input1=ExcelUtility.getStringdata(0, 0, "SubCategory");
+		String  input2=ExcelUtility.getStringdata(0, 1, "SubCategory");
+		
+		home3.clickonSubCategorySubCategory(input2);
 		
 		boolean isSubCategoryisEnabled=home3.isSubCategoryisEnabled();
 		Assert.assertTrue(isSubCategoryisEnabled,Messages.SUBCATADDED);
@@ -59,10 +64,11 @@ public void searchCategory() throws IOException
 		 home3.clicksubcategory();
 		 
 		 home3.clickonSearchButton();
-		// String input=ExcelUtility.getStringdata(1, 0, "SubCategory");
-		 //String input1=ExcelUtility.getStringdata(1, 1, "SubCategory");
 		 home3.clickSearchListSubCategoriesCategory();
-		 home3.clickSearchListSubCategoriesSubCategory();
+		 String input=ExcelUtility.getStringdata(1, 0, "SubCategory");
+		 String input3=ExcelUtility.getStringdata(1, 1, "SubCategory");
+		 
+		 home3.clickSearchListSubCategoriesSubCategory(input3);
 		 boolean isSubCategoryisEnabled=home3.isSubCategoryisEnabled();
 			Assert.assertTrue(isSubCategoryisEnabled,Messages.SUBCATEGORYS);
 		 

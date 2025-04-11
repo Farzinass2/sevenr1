@@ -30,7 +30,7 @@ public class ManageNewsPage {
 	public ManageNewsPage clickonManageNews()
 	{
 		managenewsElement.click();
-		return null;
+		return this;
 	}
 	public void clickonManageUserNewButton()
 	{
@@ -44,18 +44,18 @@ public class ManageNewsPage {
 	public ManageNewsPage clickonEnterNewsElement(String input)
 	{
 		enterthenewsElement.sendKeys(input);
-		return null;
+		return this;
 	}
 	public ManageNewsPage clickonSaveButton()
 	{
 		wait.waitUntilClickable(driver, savElement);
 		savElement.click();
-		return null;
+		return this;
 	}
 	public ManageNewsPage entertheNewsTitle(String input)
 	{
 		newsTitlElement.sendKeys(input);
-		return null;
+		return this;
 		
 		
 	}

@@ -62,18 +62,21 @@ public class SubCategoryPage {
 	}
 	public SubCategoryPage clickonSubCategoryCategory()
 	{
-		enterSubCategoryInformationCategory.sendKeys("vegetables");
+		enterSubCategoryInformationCategory.click();
+		Select select=new Select(enterSubCategoryInformationCategory);
+		select.selectByIndex(1);
 		return this;
+		
 }
-	public SubCategoryPage clickonSubCategorySubCategory()
+	public SubCategoryPage clickonSubCategorySubCategory(String input2)
 	{
-		enterSubCategoryInformationsubCategory.sendKeys("beetroot");
+		enterSubCategoryInformationsubCategory.sendKeys(input2);
 		return this;
 		
 	}
 	public  SubCategoryPage chooseImage()
 	{
-		imageuploadElement.sendKeys(Constants.TESTDATAFILE1);
+		imageuploadElement.sendKeys(Constants.IMAGE1);
 		return this;
 		
 	}
@@ -106,7 +109,7 @@ public class SubCategoryPage {
 		searchListSubCategoryCategoryElement.click();
 		return this;
 	}
-	public void clickSearchListSubCategoriesCategory()
+	public SubCategoryPage clickSearchListSubCategoriesCategory()
 	{
 		searchListSubCategoryCategoryElement.click();
 
@@ -114,14 +117,15 @@ public class SubCategoryPage {
 		select.selectByIndex(1);
 		
 		select.selectByValue("555");
+		return this;
 		
 		
 		
 		
 	}
-	public void clickSearchListSubCategoriesSubCategory()
+	public void clickSearchListSubCategoriesSubCategory(String input3)
 	{
-		searchListSubCategorySubCategoryElement.sendKeys("carrot");
+		searchListSubCategorySubCategoryElement.sendKeys(input3);
 		
 	}
 	public void clickonSearch1()
