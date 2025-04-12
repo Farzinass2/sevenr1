@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-04-12T03:28:56 IST" name="Suite" finished-at="2025-04-12T03:29:10 IST" duration-ms="13159">
+  <suite started-at="2025-04-12T13:17:42 IST" name="Suite" finished-at="2025-04-12T13:17:57 IST" duration-ms="14918">
     <groups>
       <group name="smoke">
         <method signature="SubCategoryTest.addNewCategory()[pri:1, instance:testscripts.SubCategoryTest@2d0399f4]" name="addNewCategory" class="testscripts.SubCategoryTest"/>
         <method signature="SubCategoryTest.searchCategory()[pri:2, instance:testscripts.SubCategoryTest@2d0399f4]" name="searchCategory" class="testscripts.SubCategoryTest"/>
       </group> <!-- smoke -->
     </groups>
-    <test started-at="2025-04-12T03:28:56 IST" name="Test" finished-at="2025-04-12T03:29:10 IST" duration-ms="13159">
+    <test started-at="2025-04-12T13:17:42 IST" name="Test" finished-at="2025-04-12T13:17:57 IST" duration-ms="14918">
       <class name="testscripts.SubCategoryTest">
-        <test-method is-config="true" signature="initialiseBrowser(java.lang.String)[pri:0, instance:testscripts.SubCategoryTest@2d0399f4]" started-at="2025-04-12T03:28:56 IST" name="initialiseBrowser" finished-at="2025-04-12T03:29:01 IST" duration-ms="4834" status="PASS">
+        <test-method is-config="true" signature="initialiseBrowser(java.lang.String)[pri:0, instance:testscripts.SubCategoryTest@2d0399f4]" started-at="2025-04-12T13:17:42 IST" name="initialiseBrowser" finished-at="2025-04-12T13:17:49 IST" duration-ms="6979" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -22,11 +22,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialiseBrowser -->
-        <test-method signature="addNewCategory()[pri:1, instance:testscripts.SubCategoryTest@2d0399f4]" started-at="2025-04-12T03:29:01 IST" name="addNewCategory" description="Add new Category and SubCategory in Sub-Category Menu" finished-at="2025-04-12T03:29:05 IST" duration-ms="3576" status="PASS">
+        <test-method signature="addNewCategory()[pri:1, instance:testscripts.SubCategoryTest@2d0399f4]" started-at="2025-04-12T13:17:49 IST" name="addNewCategory" description="Add new Category and SubCategory in Sub-Category Menu" finished-at="2025-04-12T13:17:53 IST" duration-ms="3430" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addNewCategory -->
-        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testscripts.SubCategoryTest@2d0399f4]" started-at="2025-04-12T03:29:05 IST" name="driverQuit" finished-at="2025-04-12T03:29:05 IST" duration-ms="175" status="PASS">
+        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testscripts.SubCategoryTest@2d0399f4]" started-at="2025-04-12T13:17:53 IST" name="driverQuit" finished-at="2025-04-12T13:17:53 IST" duration-ms="207" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -37,7 +37,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- driverQuit -->
-        <test-method is-config="true" signature="initialiseBrowser(java.lang.String)[pri:0, instance:testscripts.SubCategoryTest@2d0399f4]" started-at="2025-04-12T03:29:05 IST" name="initialiseBrowser" finished-at="2025-04-12T03:29:07 IST" duration-ms="2308" status="PASS">
+        <test-method is-config="true" signature="initialiseBrowser(java.lang.String)[pri:0, instance:testscripts.SubCategoryTest@2d0399f4]" started-at="2025-04-12T13:17:53 IST" name="initialiseBrowser" finished-at="2025-04-12T13:17:55 IST" duration-ms="2476" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -48,11 +48,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialiseBrowser -->
-        <test-method signature="searchCategory()[pri:2, instance:testscripts.SubCategoryTest@2d0399f4]" started-at="2025-04-12T03:29:07 IST" name="searchCategory" description="Search the added item in Sub-Category Menu" finished-at="2025-04-12T03:29:09 IST" duration-ms="2015" status="PASS">
+        <test-method signature="searchCategory()[pri:2, instance:testscripts.SubCategoryTest@2d0399f4]" started-at="2025-04-12T13:17:55 IST" name="searchCategory" description="Search the added item in Sub-Category Menu" finished-at="2025-04-12T13:17:57 IST" duration-ms="1613" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchCategory -->
-        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testscripts.SubCategoryTest@2d0399f4]" started-at="2025-04-12T03:29:09 IST" name="driverQuit" finished-at="2025-04-12T03:29:10 IST" duration-ms="191" status="PASS">
+        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testscripts.SubCategoryTest@2d0399f4]" started-at="2025-04-12T13:17:57 IST" name="driverQuit" finished-at="2025-04-12T13:17:57 IST" duration-ms="144" status="PASS">
           <params>
             <param index="0">
               <value>

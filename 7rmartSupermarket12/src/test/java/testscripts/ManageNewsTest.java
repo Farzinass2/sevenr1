@@ -34,7 +34,7 @@ public class ManageNewsTest  extends Base{
 		String input=ExcelUtility.getStringdata(0, 0, "News");
 		home1.clickonEnterNewsElement(input);
 		boolean isManageNewsDisplayed=home1.isManageNewsIsEnabled();
-		Assert.assertTrue(isManageNewsDisplayed,Messages.VALIDCREDENTIALERROR3);
+		Assert.assertTrue(isManageNewsDisplayed,Messages.NEWNEWSADDING);
 		home1.clickonSaveButton();
 		
 	}
@@ -53,7 +53,7 @@ public class ManageNewsTest  extends Base{
 		home1.clickonManageNewsSearchButton();
 		home1.entertheNewsTitle(input);
 		boolean isManageNewsDisplayed=home1.isManageNewsIsEnabled();
-		Assert.assertTrue(isManageNewsDisplayed,Messages.VALIDCREDENTIALERROR3);
+		Assert.assertTrue(isManageNewsDisplayed,Messages.NEWSEARCH);
 		//home1.clickonManageNewsSearchButton();
 
 }

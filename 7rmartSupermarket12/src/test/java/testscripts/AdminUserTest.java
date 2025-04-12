@@ -50,13 +50,10 @@ public class AdminUserTest extends Base{
 		admin.enterPasswordonPasswordField(password1);
 		admin.clickonAdminUseTypeElement();
 		admin.clickonSaveButton1();
-		boolean isAlertWindowPresent=admin.isAlertWindowPresenting() ;
-		Assert.assertTrue(isAlertWindowPresent,Messages.ALERTWINDOWMESSAGE);
+		boolean isAlertWindowPresent=admin.isAlertWindow() ;
+		Assert.assertTrue(isAlertWindowPresent,Messages.ALERTWINDOW);
 	}
-		//adminusers.clickonAdminUserNavigationLink();
-		//homepage.clickonAdminUser();
-		//adminusers.clickonManageUsers1();
-		//adminusers=homepage.clickonManageNews();
+		
 		
 @Test(description="Whether user can search new Admin",priority=2,groups= {"smoke"})
 	public void searchCreatedAdminUser1() throws IOException
@@ -76,6 +73,8 @@ public class AdminUserTest extends Base{
 		admin.enterSearchuserName(newusername);
 		//admin.clickonSearchButtonUserType();
 		admin.clickonSearchButton();
+		String isSearchUserHeaderisDisplayed=admin.isActiveSearchwork();
+		Assert.assertEquals(isSearchUserHeaderisDisplayed,Messages.NEWADMINPRESENT23);
 		
 	
 }

@@ -44,7 +44,9 @@ public class AdminUserPage {
 	
 	@FindBy(xpath="//button[@class=\"btn btn-block-sm btn-danger\"]")private WebElement searchButtonUserName;
 	@FindBy(xpath="//button[@aria-hidden=\"true\"]")private WebElement alertAdminUser123;
-	@FindBy(xpath ="//span[@class='badge bg-success']")private WebElement activebutton;
+	@FindBy(xpath ="//span[text()='Active']")private WebElement activebutton;
+	
+	//@FindBy(xpath ="//span[@class='badge bg-success']")private WebElement activebutton;
 	
 	
 	
@@ -121,21 +123,20 @@ public class AdminUserPage {
 	
 	
 
-	public boolean isAlertWindowPresenting() {
+	public boolean isAlertWindow() {
+		
 		return alertAdminUser123.isDisplayed();
 	}
-	public String verifyActiveSearchisWork() {
-		return activebutton.getText();
+	public String isActiveSearchwork() {
+		
+	return	activebutton.getText();
+		
+		
+	
 
-
-
-	}
-	public AdminUserPage enterNewPassword(String newpassWord) {
-		searchadminpasswordElement1.sendKeys(newpassWord);
-		return this;
 		
 	}
-
+	
 	}
 	
 

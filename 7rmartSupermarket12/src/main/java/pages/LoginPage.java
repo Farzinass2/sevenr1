@@ -19,11 +19,8 @@ public class LoginPage {
 	@FindBy(xpath="//input[@name='password']") private WebElement passwordElement;
 	@FindBy(xpath="//button[text()='Sign In']") private WebElement signInElement;
 	@FindBy(xpath="//p[text()='Dashboard']") private WebElement dashboardElement;
-	@FindBy(xpath="/html/body/div/div[2]/h5/i")private WebElement alertmessagElement;
-	private WebElement invalidmessage;
-	private WebElement logout1;
-	private WebElement mainTitlElement;
-	
+	//@FindBy(xpath="/html/body/div/div[2]/h5/i")private WebElement alertmessagElement;
+	@FindBy(xpath="//div[@class='alert alert-danger alert-dismissible']")private WebElement alertmessagElement1;
 public LoginPage enterUsernameonUserNameField(String userNameValue)
 {
 	userElement.sendKeys(userNameValue);
@@ -51,21 +48,8 @@ public boolean isDashboardEnabled()
 }
 public boolean alertmessage()
 {
-return alertmessagElement.isDisplayed();
+return alertmessagElement1.isDisplayed();
 
 }
-public String isinValidMessageDisplayed() {
-	return invalidmessage.getText();
 
-}
-public LoginPage clickonLogOutButton() {
-	// TODO Auto-generated method stub
-	wait.waitUntilVisibilityOfElement(driver, logout1);
-	logout1.click();
-	return new LoginPage(driver);
-
-}
-public String getTextFromTitle() {
-	return mainTitlElement.getText();
-}
 }
