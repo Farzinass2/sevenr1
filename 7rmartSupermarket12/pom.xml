@@ -16,7 +16,6 @@
     <version>7.10.2</version>
     <scope>test</scope>
 </dependency>
-<!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
 <dependency>
     <groupId>org.apache.poi</groupId>
     <artifactId>poi</artifactId>
@@ -28,6 +27,17 @@
     <artifactId>poi-ooxml</artifactId>
     <version>5.2.3</version>
 </dependency>
+<dependency>
+    <groupId>org.apache.poi</groupId>
+    <artifactId>poi</artifactId>
+    <version>5.2.3</version>
+</dependency>
+<dependency>
+    <groupId>org.apache.poi</groupId>
+    <artifactId>poi-ooxml</artifactId>
+    <version>5.2.3</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
 
 <dependency>
 	<groupId>com.aventstack</groupId>
@@ -59,11 +69,8 @@
 	  <artifactId>lombok</artifactId>
 	  <version>1.18.22</version>
 	</dependency>
-	<dependency>
-	  <groupId>org.projectlombok</groupId>
-	  <artifactId>lombok</artifactId>
-	  <version>1.18.22</version>
-	</dependency>
+	
+	</dependencies>
 <build>
 
 	  <plugins>
@@ -109,6 +116,4 @@
 	  </plugins>
 
   </build>
-
-</dependencies>
 </project>
